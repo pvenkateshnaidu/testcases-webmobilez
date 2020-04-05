@@ -11,7 +11,7 @@ public class Test {
 
 public static void main(String[] args) throws InterruptedException {
 // TODO Auto-generated method stub
-System.setProperty("webdriver.gecko.driver","C:\\Users\\webmobilez\\eclipse-workspace\\DemoTest\\geckodriver.exe");
+System.setProperty("webdriver.gecko.driver","E:\\geckodriver.exe");
 DesiredCapabilities capabilities = DesiredCapabilities.firefox();  
 capabilities.setCapability("marionette",true); 
 WebDriver driver = new FirefoxDriver();
@@ -29,14 +29,17 @@ driver.get("https://www.facebook.com");
      driver.findElement(By.name("reg_passwd__")).sendKeys("Tech$5367");
      Select bday = new Select(driver.findElement(By.name("birthday_day")));
      bday.selectByValue("11");
-   
+     Select bmonth = new Select(driver.findElement(By.name("birthday_month")));
+     bmonth.selectByValue("6");
+     Select byear = new Select(driver.findElement(By.name("birthday_year")));
+     byear.selectByValue("1988");
      List list = driver.findElements(By.name("sex"));
      ((WebElement) list.get(1)).click();
      driver.findElement(By.name("websubmit")).click();
      System.out.println("Successfully logged in");
      Thread.sleep(3000);
      driver.findElement(By.id("userNavigationLabel")).click();
-     Thread.sleep(2000);
+     Thread.sleep(3000);
      driver.findElement(By.partialLinkText("Log Out")).click();
      System.out.println("Successfully logged out");
 
