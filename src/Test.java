@@ -11,7 +11,7 @@ public class Test {
 
 public static void main(String[] args) throws InterruptedException {
 // TODO Auto-generated method stub
-System.setProperty("webdriver.gecko.driver","E:\\geckodriver.exe");
+System.setProperty("webdriver.gecko.driver","C:\\Users\\webmobilez\\eclipse-workspace\\DemoTest\\geckodriver.exe");
 DesiredCapabilities capabilities = DesiredCapabilities.firefox();  
 capabilities.setCapability("marionette",true); 
 WebDriver driver = new FirefoxDriver();
